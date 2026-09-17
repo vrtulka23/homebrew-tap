@@ -1,8 +1,8 @@
 class Scinumtools3 < Formula
   desc "C++ toolkit for unit-aware scientific computation"
   homepage "https://github.com/vrtulka23/scinumtools3"
-  url "https://github.com/vrtulka23/scinumtools3/archive/refs/tags/v0.6.2.tar.gz"
-  sha256 "420c622fa7cdba292c8fcf091b8c3600cfa335a573d0301ba378f5f612132286"
+  url "https://github.com/vrtulka23/scinumtools3/archive/refs/tags/v0.8.0.tar.gz"
+  sha256 "cfb91ae6c62a35969d656f908795ded3ad49f855353ea4e829dedbdedaea308c"
   license "MIT"
   head "https://github.com/vrtulka23/scinumtools3.git", branch: "main"
 
@@ -15,7 +15,7 @@ class Scinumtools3 < Formula
       -DENABLE_UNIT_TESTS=OFF
       -DENABLE_BINDING_PYTHON=OFF
 
-      -DENABLE_SNT=ON
+      -DENABLE_CORE=ON
       -DENABLE_EXS=ON
       -DENABLE_VAL=ON
       -DENABLE_PUQ=ON
