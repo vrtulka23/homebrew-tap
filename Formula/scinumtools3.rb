@@ -1,8 +1,8 @@
 class Scinumtools3 < Formula
   desc "C++ toolkit for unit-aware scientific computation"
   homepage "https://github.com/vrtulka23/scinumtools3"
-  url "https://github.com/vrtulka23/scinumtools3/archive/refs/tags/v0.9.0.tar.gz"
-  sha256 "dd8e47093f844da6f3c5f2aea4afc786ab581040d311972e27755b9879edfce5"
+  url "https://github.com/vrtulka23/scinumtools3/archive/refs/tags/v0.9.1.tar.gz"
+  sha256 "72439b93d7c491861dec3d19078aab5126a1fef6533ef232128df33f4c4b65fc"
   license "MIT"
   head "https://github.com/vrtulka23/scinumtools3.git", branch: "main"
 
@@ -63,6 +63,7 @@ class Scinumtools3 < Formula
       -DENABLE_SNT_DMAP=OFF
       -DENABLE_SNT_SERVER=ON
       -DENABLE_SNT_VIEW=ON
+      -DENABLE_SNT_REPORT=ON
       -DENABLE_EXEC_EXAMPLES=OFF
       -DENABLE_EXEC_BENCHMARKS=OFF
     ]
@@ -77,5 +78,6 @@ class Scinumtools3 < Formula
     assert_match version.to_s, output
     assert_match "snt server [options]", shell_output("#{bin}/snt server --help")
     assert_match "snt view <artifact>", shell_output("#{bin}/snt view --help")
+    assert_match "snt report", shell_output("#{bin}/snt report --help")
   end
 end
